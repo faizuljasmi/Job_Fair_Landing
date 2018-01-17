@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Choose Career Fair | Seeds Job Fair</title>
+	<title>How Seeds Job Fair Works? | Seeds Job Fair</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="https://seedsjobfair.com/wp-content/uploads/2017/04/cropped-icon-32x32.png" sizes="32x32" />
@@ -41,10 +41,10 @@
 						<a class="white" href="history.html">History</a>
 					</li>
 					<li>
-						<a class="white" href="how.html">How It Works?</a>
+						<a class="white  active" href="how.html">How It Works?</a>
 					</li>
 					<li>
-						<a class="white active" href="choose-cf.html">Go To App</a>
+						<a class="white" href="choose-cf.html">Go To App</a>
 					</li>
 				</ul>
 			</nav>
@@ -54,27 +54,18 @@
 		<div id="main" class="wrapper style1">
 			<div class="container">
 				<header class="major">
-					<h2 style="color:#000000">Choose Career Fair</h2>
-					<p style="color:#000000"></p>
+					<h2 style="color:#000000">How it Works?</h2>
+					<p style="color:#000000">A brief explanation about how Seeds Job Fair works</p>
 				</header>
 				<div class="row 50% uniform">
 
-					<!-- TEMPLATE FORM ITEM -->
-					<a hidden="hidden" id="item-template" class="white" href="?cf=USA">
-						<li class="cf-item" style="background:url('images/cf/US-flag.jpg'); background-size: cover; background-position: center center;">
-							<div class="text">
-								<div class="title">USA</div>
-								<small class="subtitle">12-15, April 2018</small>
-							</div>
-						</li>
-					</a>
-
 					<!-- Content -->
-					<div id="choose-cf">
-						<ul class="cf">
-							<!-- item will be appended here from renderItem() function -->
-						</ul>
-					</div>
+					<section id="content">
+						<a class="image fit">
+							<img src="images/vicaf-howto.jpeg" alt="" />
+						</a>
+					</section>
+
 
 				</div>
 			</div>
@@ -118,49 +109,6 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
-	<script>
-		jQuery(document).ready(function () {
-			function renderItem(data) {
-				for (var i in data) {
-					var d = data[i];
-
-					li_template.attr("href", d.href);
-					lit_item.css("background", "url('" + d.img_url + "')");
-					lit_item.css("background-position", "center center");
-					lit_item.css("background-size", "cover");
-					lit_title.html(d.title);
-					lit_subtitle.html(d.subtitle);
-
-					var new_item = li_template.clone(true, true);
-					new_item.removeAttr("id");
-					new_item.removeAttr("hidden");
-					ul.append(new_item);
-				}
-			}
-
-			var ul = jQuery("ul.cf");
-			var li_template = jQuery("a#item-template");
-			var lit_item = li_template.find("li.cf-item");
-			var lit_title = li_template.find(".text .title");
-			var lit_subtitle = li_template.find(".text .subtitle");
-
-			var APP_URL = "https://seedsjobfair.com/cf/app/?cf=";
-			// set data here
-			var data = [{
-				title: "USA", subtitle: "7-9, April 2018",
-				img_url: "images/cf/US-flag.jpg", href: APP_URL + "USA"
-			}, {
-				title: "JAPAN", subtitle: "TBA",
-				img_url: "images/cf/JAPAN-flag.jpg", href: APP_URL + "JAPAN"
-			}, {
-				title: "GERMANY", subtitle: "TBA",
-				img_url: "images/cf/GERMANY-flag.jpg", href: APP_URL + "GERMANY"
-			}];
-
-			renderItem(data);
-
-		});
-	</script>
 </body>
 
 </html>
