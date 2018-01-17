@@ -1579,28 +1579,14 @@
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #3CB371;
+		color: #e44c65;
 		text-decoration: none;
 	}
 
-	a:hover {
-		color: #3CB371 !important;
-		border-bottom-color: transparent;
-	}
-
-	a.white{
-		color:white;
-		font-weight: bolder;
-	}
-
-	a.white.active{
-		text-decoration: underline;
-	}
-
-	a.white:hover {
-		color:white !important;
-		opacity: 0.9;
-	}
+		a:hover {
+			color: #e44c65 !important;
+			border-bottom-color: transparent;
+		}
 
 	strong, b {
 		color: #ffffff;
@@ -2210,7 +2196,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #3CB371;
+			border-color: #e44c65;
 		}
 
 	.select-wrapper {
@@ -2327,7 +2313,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #3CB371;
+			border-color: #e44c65;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2748,8 +2734,8 @@
 		input[type="button"]:active,
 		.button:hover,
 		.button:active {
-			box-shadow: inset 0 0 0 1px #3CB371;
-			color: #3CB371 !important;
+			box-shadow: inset 0 0 0 1px #e44c65;
+			color: #e44c65 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2793,7 +2779,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #3CB371;
+			background-color: #e44c65;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -2802,14 +2788,14 @@
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			.button.special:hover {
-				background-color: #44c980;
+				background-color: #e76278;
 			}
 
 			input[type="submit"].special:active,
 			input[type="reset"].special:active,
 			input[type="button"].special:active,
 			.button.special:active {
-				background-color: #3CB371;
+				background-color: #e13652;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -3034,7 +3020,7 @@
 		}
 
 		.spotlight.style1 .content {
-			border-color: #3CB371;
+			border-color: #e44c65;
 		}
 
 		.spotlight.style2 .content {
@@ -3096,7 +3082,7 @@
 	}
 
 		.wrapper.style2 {
-			background: #3CB371;
+			background: #e44c65;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -3131,7 +3117,7 @@
 			.wrapper.style2 input[type="button"].special,
 			.wrapper.style2 .button.special {
 				background-color: #ffffff;
-				color: #3CB371 !important;
+				color: #e44c65 !important;
 			}
 
 				.wrapper.style2 input[type="submit"].special:hover, .wrapper.style2 input[type="submit"].special:active,
@@ -3235,7 +3221,7 @@
 			}
 
 			.dropotron > li.active > a, .dropotron > li.active > span {
-				color: #3CB371;
+				color: #e44c65;
 			}
 
 		.dropotron.level-0 {
@@ -3325,7 +3311,7 @@
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #3CB371;
+						color: #e44c65;
 					}
 
 					#header nav ul li > ul {
@@ -3799,7 +3785,7 @@
 					}
 
 					#titleBar .toggle:before {
-						background: #3CB371;
+						background: #e44c65;
 						color: rgba(255, 255, 255, 0.5);
 						content: '\f0c9';
 						display: block;
@@ -4005,45 +3991,6 @@
 						display: block;
 						margin: 0;
 						padding: 0;
-					}	
+					}
 
-	}
-
-	/**** Choose CF Style *********/
-	#choose-cf{
-		width: 100%;
-		text-align: center;
-		
-
-	}
-	
-	#choose-cf ul.cf{
-		padding-left: 0;
-		margin: 0;
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		align-items:center;
-		flex-wrap: wrap;
-	}
-
-	#choose-cf ul.cf li.cf-item{
-		height: 200px;
-		width: 200px;
-		padding: 0;
-		background: #3CB371;
-		box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.4);
-		margin: 10px;
-	}
-
-	#choose-cf ul.cf li.cf-item .text{
-		display: flex;
-		padding: 10px;
-		background:rgba(0,0,0,0.4);
-		height: 100%;
-		justify-content: center;
-		align-items:center;
-		font-weight: bold;
-		color:white;
-		font-size: 30px;
 	}
