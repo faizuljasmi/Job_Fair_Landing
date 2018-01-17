@@ -4038,12 +4038,20 @@
 
 	#choose-cf ul.cf li.cf-item .text{
 		display: flex;
+		flex-flow: column;
 		padding: 10px;
-		background:rgba(0,0,0,0.4);
+		background:rgba(0,0,0,0.5);
 		height: 100%;
 		justify-content: center;
 		align-items:center;
 		font-weight: bold;
 		color:white;
 		font-size: 30px;
+	}
+
+	#choose-cf ul.cf li.cf-item .text small{
+		font-size: 70%;
+		margin-top: 5px;
+		opacity: 0.8;
+		font-style: italic;
 	}
