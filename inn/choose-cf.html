@@ -59,36 +59,22 @@
 				</header>
 				<div class="row 50% uniform">
 
+					<!-- TEMPLATE FORM ITEM -->
+					<a hidden="hidden" id="item-template" class="white" href="?cf=USA">
+						<li class="cf-item" style="background:url('images/cf/US-flag.jpg'); background-size: cover; background-position: center center;">
+							<div class="text">
+								<div class="title">USA</div>
+								<small class="subtitle">12-15, April 2018</small>
+							</div>
+						</li>
+					</a>
+
 					<!-- Content -->
 					<div id="choose-cf">
 						<ul class="cf">
-							<a class="white" href="?cf=USA">
-								<li class="cf-item" style="background:url('images/cf/US-flag.jpg'); background-size: cover; background-position: center center;">
-									<div class="text">
-										<div>USA</div>
-										<small>12-15, April 2018</small>
-									</div>
-								</li>
-							</a>
-							<a class="white" style="background:url('')" href="?cf=JAPAN">
-								<li class="cf-item" style="background:url('images/cf/JAPAN-flag.jpg'); background-size: cover; background-position: center center;">
-									<div class="text">
-										<div>JAPAN</div>
-										<small>21-25, June 2018</small>
-									</div>
-								</li>
-							</a>
-							<a class="white" style="background:url('')" href="?cf=GERMANY">
-								<li class="cf-item" style="background:url('images/cf/GERMANY-flag.jpg'); background-size: cover; background-position: center center;">
-									<div class="text">
-										<div>GERMANY</div>
-										<small>TBA</small>
-									</div>
-								</li>
-							</a>
+							<!-- item will be appended here -->
 						</ul>
 					</div>
-
 
 				</div>
 			</div>
@@ -132,6 +118,48 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
+	<script>
+		jQuery(document).ready(function () {
+			function renderItem(data) {
+				for (var i in data) {
+					var d = data[i];
+
+					li_template.attr("href", d.href);
+					lit_item.css("background", "url('" + d.img_url + "')");
+					lit_item.css("background-position", "center center");
+					lit_item.css("background-size", "cover");
+					lit_title.html(d.title);
+					lit_subtitle.html(d.subtitle);
+
+					var new_item = li_template.clone(true, true);
+					new_item.removeAttr("id");
+					new_item.removeAttr("hidden");
+					ul.append(new_item);
+				}
+			}
+
+			var ul = jQuery("ul.cf");
+			var li_template = jQuery("a#item-template");
+			var lit_item = li_template.find("li.cf-item");
+			var lit_title = li_template.find(".text .title");
+			var lit_subtitle = li_template.find(".text .subtitle");
+
+			// set data here
+			var data = [{
+				title: "USA", subtitle: "12-15, April 2018",
+				img_url: "images/cf/US-flag.jpg", href: "?cf=USA"
+			}, {
+				title: "JAPAN", subtitle: "23-25, June 2018",
+				img_url: "images/cf/JAPAN-flag.jpg", href: "?cf=JAPAN"
+			}, {
+				title: "GERMANY", subtitle: "TBA",
+				img_url: "images/cf/GERMANY-flag.jpg", href: "?cf=GERMANY"
+			}];
+
+			renderItem(data);
+
+		});
+	</script>
 </body>
 
 </html>
