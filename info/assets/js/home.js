@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-    var API_URL = "http://localhost:4000/subscribe/";
+    var API_URL = "http://localhost:4000/add-meta/";
 
     var form_sub = jQuery("form#subscribe");
     var email = form_sub.find("input#email");
@@ -13,7 +13,9 @@ jQuery(document).ready(function () {
             url: API_URL,
             method: "POST",
             data: {
-                email: email.val()
+                key: "subscriber",
+                value: email.val(),
+                source: "landing_page"
             },
             success: function (res) {
                 alert("Thank you! Your Email Has Been Successfully Submitted");
