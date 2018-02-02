@@ -1,0 +1,4 @@
+[0128/160050.060:ERROR:process_info.cc(632)] range at 0x6a7f2afa00000000, size 0x1a1 fully unreadable
+[0128/160050.061:ERROR:process_info.cc(632)] range at 0x6a7f2b1a00000000, size 0x1a1 fully unreadable
+[0128/160050.061:ERROR:process_info.cc(632)] range at 0x0, size 0x1a1 fully unreadable
+[0128/160050.433:ERROR:process_info.cc(396)] NtQuerySystemInformation SystemExtendedHandleInformation: The specified information record length does not match the length required for the specified information class.  (0xc0000004)
