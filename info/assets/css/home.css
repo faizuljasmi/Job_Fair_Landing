@@ -1,0 +1,31 @@
+.section-green {
+    background: #33965f !important;
+    font-weight: initial;
+}
+
+.section-green input {
+    color: white;
+}
+
+.section-green p {
+    line-height: 25px;
+}
+
+.section-green p small {
+    font-size: 85%;
+}
+
+input,
+textarea {
+    font-weight: initial !important;
+}
+
+.testimony {
+    max-width: 900px;
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
