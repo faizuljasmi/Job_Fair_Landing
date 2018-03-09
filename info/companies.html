@@ -21,6 +21,8 @@
 
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/home.css" />
+
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
@@ -36,13 +38,13 @@
 			<nav id="nav">
 				<ul>
 					<li>
-						<a class="white active" href="index.html">Home</a>
+						<a class="white" href="index.html">Home</a>
 					</li>
 					<li>
 						<a class="white" href="students.html">Students</a>
 					</li>
 					<li>
-						<a class="white" href="companies.html">Companies</a>
+						<a class="white active" href="companies.html">Companies</a>
 					</li>
 					<li>
 						<a class="white" href="choose-cf.html">Go To App</a>
@@ -130,23 +132,23 @@
 					<h1>Drop your details below</h1>
 				</header>
 				<section>
-					<form method="post" action="#">
+					<form id="enquiries" action="">
 						<div class="row uniform 50%">
 							<div class="6u 12u$(xsmall)">
-								<input type="text" name="name" id="name" value="" placeholder="Name" />
+								<input required type="text" name="name" id="name" value="" placeholder="Name" />
 							</div>
 							<div class="6u 12u$(xsmall)">
-								<input type="text" name="comp_name" id="comp_name" value="" placeholder="Company Name" />
+								<input required type="text" name="comp_name" id="comp_name" value="" placeholder="Company Name" />
 							</div>
 							<div class="6u$ 12u$(xsmall)">
-								<input type="email" name="email" id="email" value="" placeholder="Company Email" />
+								<input required type="email" name="email" id="email" value="" placeholder="Company Email" />
 							</div>
 							<div class="12u$">
-								<textarea name="message" id="message" placeholder="Hi, we are interested to exhibit our company in your virtual career fair!" rows="6"></textarea>
+								<textarea required name="message" id="message" placeholder="Hi, we are interested to exhibit our company in your virtual career fair!" rows="6"></textarea>
 							</div>
 							<div class="12u$">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="special" /></li>
+									<li><input id="submit" type="submit" value="Send Message" class="special" /></li>
 
 								</ul>
 							</div>
@@ -189,8 +191,6 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-
-		<!-- Home script added by Wan Zulsarhan -->
 		<script src="assets/js/home.js"></script>
 </body>
 
