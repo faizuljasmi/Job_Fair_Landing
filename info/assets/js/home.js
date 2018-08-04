@@ -1,7 +1,4 @@
 jQuery(document).ready(function () {
-<<<<<<< HEAD
-    var API_URL = "http://localhost:4000/add-meta/";
-=======
     var API_URL = "https://seedsjobfair.com/cf/add-meta/";
     
     function postMeta(key, value, source, success, error) {
@@ -52,7 +49,6 @@ jQuery(document).ready(function () {
         //var as = JSON.parse(decodeURI(s));
 
         toSubmit = encodeURI(JSON.stringify(toSubmit));
->>>>>>> 137d8c26840475b92067862a2f49f29292a2c41a
 
         postMeta("enquiries", toSubmit, "landing_page"
             , function (res) {
@@ -78,21 +74,9 @@ jQuery(document).ready(function () {
         ev.preventDefault();
 
         submit_btn.attr("disabled", "disabled");
-<<<<<<< HEAD
-        jQuery.ajax({
-            url: API_URL,
-            method: "POST",
-            data: {
-                key: "subscriber",
-                value: email.val(),
-                source: "landing_page"
-            },
-            success: function (res) {
-=======
 
         postMeta("subscriber", email.val(), "landing_page"
             , function (res) {
->>>>>>> 137d8c26840475b92067862a2f49f29292a2c41a
                 alert("Thank you! Your Email Has Been Successfully Submitted");
                 submit_btn.removeAttr("disabled", "disabled");
             }, function (err) {
